@@ -3,9 +3,6 @@
 require('dotenv');
 
 const { Telegraf } = require('telegraf');
-const express = require('express');
-
-const app = express();
 
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const BOT_URL = process.env.BOT_URL;
@@ -13,12 +10,9 @@ const PORT = process.env.PORT;
 
 const bot = new Telegraf(BOT_TOKEN);
 
-app.use(bot.webhookCallback(`/abjd-3943923-sfdsknfsdf-83fgfd`));
-bot.telegram.setWebhook(`${BOT_URL}/abjd-3943923-sfdsknfsdf-83fgfd`);
+bot.telegram.setWebhook(`${BOT_URL}/bot${TOKEN}`);
+bot.startWebhook(`/bot${TOKEN}`, null, PORT);
 
-app.listen(PORT, () => {
-    console.log(`Example app listening on port ${PORT}!`)
-  })
 
 bot.start(ctx => ctx.reply('РУССКИЙ ВОЕННЫЙ КОРАБЛЬ, ИДИ НАХУЙ!'));
 
