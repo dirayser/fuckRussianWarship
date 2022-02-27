@@ -13,8 +13,8 @@ const PORT = process.env.PORT;
 
 const bot = new Telegraf(BOT_TOKEN);
 
-app.use(bot.webhookCallback(`/bot${BOT_TOKEN}`));
-bot.telegram.setWebhook(`${BOT_URL}/bot${BOT_TOKEN}`);
+app.use(bot.webhookCallback(`/abjd-3943923-sfdsknfsdf-83fgfd`));
+bot.telegram.setWebhook(`${BOT_URL}/abjd-3943923-sfdsknfsdf-83fgfd`);
 
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}!`)
