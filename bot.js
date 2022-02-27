@@ -15,6 +15,8 @@ const bot = new Telegraf(BOT_TOKEN);
 bot.telegram.setWebhook(`${BOT_URL}/bot${BOT_TOKEN}`);
 app.use(bot.webhookCallback(`/bot${BOT_TOKEN}`));
 
+bot.start(ctx => ctx.reply('РУССКИЙ ВОЕННЫЙ КОРАБЛЬ, ИДИ НАХУЙ!'));
+
 bot.on('text', ctx => {
     const text = ctx.message.text;
     if(text.toUpperCase() == 'РУССКИЙ' || text.toUpperCase() == 'РУССКІЙ') {
