@@ -13,11 +13,17 @@ const bot = new Telegraf(BOT_TOKEN);
 bot.telegram.setWebhook(`${BOT_URL}/bot${BOT_TOKEN}`);
 bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
 
+const mainText = 'Русский военный корабль, ИДИ НАХУЙ!';
+
 bot.start(ctx => ctx.reply('РУССКИЙ ВОЕННЫЙ КОРАБЛЬ, ИДИ НАХУЙ!'));
 
 bot.on('text', ctx => {
     const text = ctx.message.text;
-    if(text.toUpperCase() == 'РУССКИЙ' || text.toUpperCase() == 'РУССКІЙ') {
+    if (mainText.toUpperCase().startsWith(text.toUpperCase())) {
+        bot.telegram.sendMessage(ctx.message.chat.id, mainText.substring(text.length), {
+            reply_to_message_id: ctx.message.message_id
+          });
+    } else if(text.toUpperCase() == 'РУССКИЙ' || text.toUpperCase() == 'РУССКІЙ') {
         bot.telegram.sendMessage(ctx.message.chat.id, 'военный корабль, ИДИ НАХУЙ!', {
           reply_to_message_id: ctx.message.message_id
         });
