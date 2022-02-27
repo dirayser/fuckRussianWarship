@@ -13,7 +13,8 @@ const PORT = process.env.PORT;
 const bot = new Telegraf(BOT_TOKEN);
 
 bot.telegram.setWebhook(`${BOT_URL}/bot${BOT_TOKEN}`);
-app.use(bot.webhookCallback(`/bot${BOT_TOKEN}`));
+bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
+// app.use(bot.webhookCallback(`/bot${BOT_TOKEN}`));
 
 bot.start(ctx => ctx.reply('РУССКИЙ ВОЕННЫЙ КОРАБЛЬ, ИДИ НАХУЙ!'));
 
@@ -34,6 +35,6 @@ bot.on('text', ctx => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Server running on port ${PORT}`);
+// });
