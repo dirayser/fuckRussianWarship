@@ -2,7 +2,7 @@
 
 require('dotenv');
 
-const Telegraf = require('telegraf');
+const { Telegraf } = require('telegraf');
 const express = require('express');
 
 const app = express();
