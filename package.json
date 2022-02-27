@@ -20,6 +20,6 @@
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "telegraf": "3.38"
+    "telegraf": "^4.7.0"
   }
 }
