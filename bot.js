@@ -18,11 +18,15 @@ app.use(bot.webhookCallback(`/bot${BOT_TOKEN}`));
 bot.on('text', ctx => {
     const text = ctx.message.text;
     if(text.toUpperCase() == 'РУССКИЙ' || text.toUpperCase() == 'РУССКІЙ') {
-        bot.telegram.sendMessage(ctx.message.chat.id, 'корабль, ИДИ НАХУЙ!', {
+        bot.telegram.sendMessage(ctx.message.chat.id, 'военный корабль, ИДИ НАХУЙ!', {
           reply_to_message_id: ctx.message.message_id
         });
-    } else if(text.toUpperCase() == 'РУССКИЙ КОРАБЛЬ' || text.toUpperCase() == 'РУССКІЙ КОРАБЛЬ') {
+    } else if(text.toUpperCase() == 'РУССКИЙ ВОЕННЫЙ КОРАБЛЬ' || text.toUpperCase() == 'РУССКІЙ ВОЕННЫЙ КОРАБЛЬ') {
         bot.telegram.sendMessage(ctx.message.chat.id, 'ИДИ НАХУЙ!', {
+          reply_to_message_id: ctx.message.message_id
+        });
+    } else if(text.toUpperCase() == 'РУССКИЙ ВОЕННЫЙ' || text.toUpperCase() == 'РУССКІЙ ВОЕННЫЙ') {
+        bot.telegram.sendMessage(ctx.message.chat.id, 'корабль, ИДИ НАХУЙ!', {
           reply_to_message_id: ctx.message.message_id
         });
     }
