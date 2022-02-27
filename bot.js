@@ -10,7 +10,7 @@ const BOT_TOKEN = process.env.BOT_TOKEN;
 const BOT_URL = process.env.BOT_TOKEN;
 const PORT = process.env.PORT;
 
-const bot = new Telegraf(BOT_TOKENN);
+const bot = new Telegraf(BOT_TOKEN);
 
 bot.telegram.setWebhook(`${BOT_URL}/bot${BOT_TOKEN}`);
 app.use(bot.webhookCallback(`/bot${BOT_TOKEN}`));
