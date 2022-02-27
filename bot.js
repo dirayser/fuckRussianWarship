@@ -12,7 +12,7 @@ const bot = new Telegraf(BOT_TOKEN);
 
 bot.launch({
     webhook: {
-      domain: BOT_URL,
+      domain: BOT_URL + `/bot${BOT_TOKEN}`,
       port: PORT
     }
   });
