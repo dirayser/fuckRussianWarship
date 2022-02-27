@@ -1,0 +1,23 @@
+{
+  "name": "fuckrussianwarship",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dirayser/fuckRussianWarship.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dirayser/fuckRussianWarship/issues"
+  },
+  "homepage": "https://github.com/dirayser/fuckRussianWarship#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "telegraf": "^4.7.0"
+  }
+}
