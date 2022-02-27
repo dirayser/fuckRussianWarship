@@ -7,7 +7,7 @@ const express = require('express');
 
 const app = express();
 const BOT_TOKEN = process.env.BOT_TOKEN;
-const BOT_URL = process.env.BOT_TOKEN;
+const BOT_URL = process.env.BOT_URL;
 const PORT = process.env.PORT;
 
 const bot = new Telegraf(BOT_TOKEN);
