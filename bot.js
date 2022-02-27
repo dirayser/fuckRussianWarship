@@ -10,8 +10,8 @@ const PORT = process.env.PORT;
 
 const bot = new Telegraf(BOT_TOKEN);
 
-bot.telegram.setWebhook(BOT_URL + `:${PORT}/bot${BOT_TOKEN}`);
-bot.startWebhook(`/bot${BOT_TOKEN}`, null, 5000);
+bot.telegram.setWebhook(`${BOT_URL}/bot${BOT_TOKEN}`);
+bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
 
 bot.start(ctx => ctx.reply('РУССКИЙ ВОЕННЫЙ КОРАБЛЬ, ИДИ НАХУЙ!'));
 
